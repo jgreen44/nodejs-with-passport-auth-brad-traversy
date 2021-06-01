@@ -1,0 +1,37 @@
+{
+  "name": "nodejs-with-passport-auth-brad-traversy",
+  "version": "1.0.0",
+  "description": "In this video we will build a complete authentication app with login, register and access control using Node.js, Express, Passport, Mongoose and more.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgreen44/nodejs-with-passport-auth-brad-traversy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgreen44/nodejs-with-passport-auth-brad-traversy/issues"
+  },
+  "homepage": "https://github.com/jgreen44/nodejs-with-passport-auth-brad-traversy#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.12.12",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

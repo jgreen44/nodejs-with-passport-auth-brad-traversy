@@ -17,4 +17,8 @@ https://www.facebook.com/traversymedia \
 https://www.twitter.com/traversymedia \
 https://www.instagram.com/traversymedia
 
-Command Lines:
+Command Lines:\
+npm init -y\
+npm i express bcryptjs passport passport-local ejs express-ejs-layouts mongoose connect-flash express-session\
+npm i -D nodemon
+
