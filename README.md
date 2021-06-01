@@ -9,7 +9,7 @@ https://github.com/bradtraversy/node_passport_login
 💖 Become a Patron: Show support & get perks!\
 http://www.patreon.com/traversymedia
 
-Website & Udemy Courses
+Website & Udemy Courses\
 http://www.traversymedia.com
 
 Follow Traversy Media:\
