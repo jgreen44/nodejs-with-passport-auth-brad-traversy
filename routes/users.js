@@ -1,5 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require('bcryptjs')
+
+// User model
+const User = require('../models/User')
 
 // Login page
 router.get('/login', (req, res) => {
@@ -13,8 +17,6 @@ router.get('/register', (req, res) => {
 
 // Register Handle
 router.post("/register", (req, res) => {
-    // console.log(req.body)
-    // res.send('Hello')
     // array destructuring
     const {name, email, password, password2} = req.body;
     let errors = [];
@@ -42,14 +44,38 @@ router.post("/register", (req, res) => {
 
     if (errors.length > 0){
         res.render('register', {
-            errors,
-            name,
-            email,
-            password,
-            password2
+            errors: errors,
+            name: name,
+            email: email,
+            password: password,
+            password2: password2
         })
     }else {
-        res.send('pass')
+        // Validation passed
+        User.findOne({ email: email})
+            .then(user => {
+                if(user){
+                    // User exists
+                    errors.push({ msg: 'Email is already registered'});
+                    res.render('register', {
+                        errors: errors,
+                        name: name,
+                        email: email,
+                        password: password,
+                        password2: password2
+                    });
+                } else {
+                    const newUser = new User({
+                        name: name,
+                        email: email,
+                        password: password
+                    });
+
+                    console.log(newUser);
+                    res.send('Hello');
+                }
+            });
+
     }
 
 })
